@@ -1,0 +1,182 @@
+#btn {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: none;
+    background-color: brown;
+    color: white;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 15px;
+    padding: 8px 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+dialog {
+    border: none;
+    border-radius: 15px;
+    background-color: #0DAEAA;
+    padding: 100px 50px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 25px;
+}
+
+.hint {
+    font-style: italic;
+    color: red;
+}
+
+dialog input {
+    text-align: center;
+    padding: 11px 5px;
+    font-size: 20px;
+    border-radius: 15px;
+    border-width: 0;
+}
+
+dialog button  {
+    padding: 14px 4px;
+    border-radius: 15px;
+    border-width: 0;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #62d562;
+}
+
+dialog button:hover {
+    background-color: #43a943;
+}
+
+dialog::backdrop {
+    opacity: .95;
+    background-color: rgb(19, 19, 19);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+    text-align: center;
+}
+
+header {
+    background-color: #0DAEAA;
+    color: white;
+    text-align: center;
+}
+
+header h1, header h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    padding-bottom: 10px;
+}
+
+.description {
+    font-weight: bold;
+}
+
+section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+main {
+    width: 1800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+main.game {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    gap: 20px;
+}
+
+.not-started h1 {
+    text-align: center;
+    margin-top: 200px;
+    font-size: 80px;
+    color: #0daeaa;
+}
+
+.flex.flex-column {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.btn-primary {
+    background-color: #0DAEAA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.btn-primary:hover {
+    background-color: #097371;
+}
+
+
+
+input, textarea {
+    min-width: 30%;
+    border-radius: 5px;
+    border-width: 1px;
+    padding-left: 15px;
+}
+/* #0DAEAA; */
+.progress {
+    background-color: transparent;
+    height: 15vh;
+    width: 80%;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+
+    display: grid;
+    place-content: center;
+    font-size: 95px;
+    font-weight: bold;
+    font-family: fantasy;
+    color: white;
+}
+
+div[datajs="outlet"] {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.color-box {
+    min-width: 30%;
+    background-color: #df4a55;
+    padding: 5px 9px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px ;
+}
+
+.teamname {
+    background-color: #0daeaa;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+}

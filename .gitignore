@@ -1,0 +1,18 @@
+# Logs
+logs
+*.log
+package-lock.json
+
+# Dependency directories
+node_modules/
+
+# Optional eslint cache
+.eslintcache
+
+# Parcel related files
+dist/
+.cache/
+.parcel-cache/
+documentation/co-chat-documentation/docs/
+
+.DS_Store

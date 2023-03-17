@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="auswertung.js" defer></script>
+    <title>CRBK Aufgabe</title>
+</head>
+<body>
+    <header>
+        <h1>CONET Business Consultants GmbH</h1>
+        <h2>Thema: Frontend </h2>
+    </header>
+    <h3>Auswertungen</h3>
+
+
+    <main>
+        <div datajs="outlet" class="flex">
+        </div>
+    </main>
+
+    <template id="bar-template">
+        <div class="flex flex-column" data-team="">
+            <div class="progress progress_4">4</div>
+            <div class="progress progress_3">3</div>
+            <div class="progress progress_2">2</div>
+            <div class="progress progress_1">1</div>
+            <div class="teamname"></div>
+        </div>
+    </template>
+
+    <audio id="audiofile" preload="auto">
+        <source src="./ton.wav" />
+    </audio>
+</body>
+</html>
