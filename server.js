@@ -2,17 +2,25 @@ const express = require('express');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
 const { userJoin } = require('./utils');
-const app = express();
-const httpServer = createServer(app);
-const io = new Server(httpServer);
+const cors = require('cors')
 
+const app = express();
+app.use(cors());
+
+const httpServer = createServer(app);
+const io = new Server(httpServer, {
+  cors: {
+    origin: "*",
+    credentials: false
+  }
+});
 
 const port = 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-// app.use('/api', require('./routes/userRoutes'));
+
 
 io.on('connection', socket => {
   console.log(`A user connect with ID ${socket.id}`);
@@ -26,12 +34,6 @@ io.on('connection', socket => {
 
         //Broadcast when a user connects
         socket.broadcast.to(user.room).emit("roomJoined", user.username);
-
-        //Send users and room info
-        // io.to(user.room).emit("roomUsers", {
-        //     room: user.room,
-        //     users: getRoomUsers(user.room)
-        // })
     })
 
   socket.on('disconnect', () => {
