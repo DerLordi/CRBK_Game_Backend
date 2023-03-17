@@ -11,7 +11,7 @@ const port = 8000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 // app.use('/api', require('./routes/userRoutes'));
 
 io.on('connection', socket => {
